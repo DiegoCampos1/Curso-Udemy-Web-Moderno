@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #03</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+      .tag {
+      border: solid 5px darkblue;
+      font-size: 50px;
+      margin: 0;
+    }
+    
+    .flex-container div {
+      box-sizing: border-box;
+    }
+
+    .flex-container {
+      display: flex;
+    }
+
+    .flex-container div {
+      flex-basis: 100px; /*Aplica o valor do tamanho no main axis*/
+      width: 200px; /*Da preferencia para o flex-basis, se n tiver usa o widht ou height*/
+    }
+
+    .flex-container div:nth-child(4) {
+      /*grow shrink basis*/
+      flex: 3 6 100px;
+    }
+
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation 1</title>
+  <style>
+   body {
+     background-color: aqua;
+   }
+
+  .container {
+    overflow: hidden;
+  }
+
+  p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite; /*Faz a animação se repetir*/
+  animation-direction: alternate; /*rola de frente pra tra e de tras pra frente*/
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  75% {
+  font-size: 300%;
+  margin-left: 25%;
+  width: 150%;
+}
+
+
+
+}
+/* As sub-propriedades da propriedade animation são:
+
+animation-delay
+Configura o delay entre o tempo em que o elemento é carregado e o inicio da sequência de animação.
+animation-direction
+Configura se a animação deve ou nao alternar a direção em cada execução durante a sequência ou voltar ao ponto inicial e se repetir.
+animation-duration
+Configura o tempo que uma animação deveria levar para completar um ciclo.
+animation-iteration-count
+Configura o numero de vezes que uma animação deveria se repetir; você pode especificar infinito para repetir a animação indefinidamente.
+animation-name
+Especifica o nome da regra com parênteses (at-rule) @keyframes at-rule descrevendo os keyframes da animação.
+animation-play-state
+Permite voce pausar e resumir a sequência da animação.
+animation-timing-function
+Configura a sincronização da animação; que é, como a animação transita por keyframes, por estabilizar curvas de aceleração.
+animation-fill-mode
+Configura que valores são aplicados pela animação antes e depois de se executar. */
+   </style>
+</head>
+<body>
+  <div class="container">
+  <div class="c1"><p>1</p></div>
+  <div class="c2"><p>2</p></div>
+  <div class="c3"><p>3</p></div>
+  <div class="c4"><p>A Lagarta e Alice olharam-se por algum tempo em silêncio: 
+finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a 
+ela com uma voz lânguida e sonolenta.</p></div>
+  </div>
+</body>
+</html>

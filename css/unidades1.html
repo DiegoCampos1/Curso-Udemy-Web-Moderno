@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        .unidades-absolutas {
+          position: absolute;
+          font-size: 40px;
+          padding: 20px;
+          border: solid 5px #222;
+          margin: 30px;
+          width: 4cm;
+          height: 20mm;
+          /* o top e o left só vai funcionar com o position absolute */
+          top: 150px; 
+          left: 200px;
+        }
+
+        .unidades-relativas {
+          position: absolute;
+          /* É uma boa prática sempre usar fontes relativas. */
+          font-size: 4em; 
+          padding: 5%;
+          border: solid 1vw #222;
+          width: 20vw;
+          height: 15vh;
+          bottom: 5%;
+          right: 5%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

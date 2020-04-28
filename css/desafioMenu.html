@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio Menu</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'oswald', Arial, Helvetica, sans-serif;
+      background-color: rgb(192, 182, 182);
+
+    }
+
+    .cabecalho {
+      display: flex;
+      background-color: rgb(49, 47, 47);
+      justify-content: space-between;
+      height: 75px;
+      align-items: center;
+      border-bottom: 3px solid rgb(57, 137, 230);
+    }
+
+    .logo img {
+      width: 300px;
+    }
+
+    .lado-esquerdo {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu {
+      align-items: center;
+      cursor: pointer;
+
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: unset;
+      padding-inline-start: 20px;
+    }
+
+    .menu ul li {
+      display: flex;
+      list-style: unset;
+      padding: 12px 8px;
+      box-sizing: border-box;
+
+    }
+
+    .menu ul a {
+      text-decoration: none;
+      margin-left: 0px;
+      color: white;
+      font-size: 1.2em;
+      padding: 15px;
+    }
+
+    /* .menu ul li:hover {
+      background-color: rgb(70, 149, 210);
+      color: black;
+
+    }
+
+    .menu ul a:hover {
+      color: black;
+    } */
+
+    .teste {
+      display: flex;
+    }
+
+    .menu-toggle {
+      margin-left: 4vw;
+    }
+
+    .lado-direito {
+      margin-right: 0px;
+    }
+
+    .autenticacao {
+      margin-right: 30px;
+    }
+
+    .autenticacao a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 5px 30px;
+      justify-content: center;
+    }
+
+    .botao {
+
+      background-color: red;
+      padding: 5px 10px;
+      border-radius: 25px;
+      justify-items: center;
+
+    }
+
+    .selected {
+      background-color: #4faddb;
+      color: black !important;
+    }
+     .menu a:hover,
+     .menu a.selected:hover {
+       background-color: #4faddb;
+       color: black;
+     } 
+
+    @media screen and (max-width: 680px) {
+      .menu {
+        display: none;
+      }
+    } 
+
+    @media screen and (min-width: 679px) {
+
+      .menu-toggle {
+        display: none;
+      }
+
+    }
+    @media screen and (max-width: 910px){
+      .autenticacao {
+        display: none;
+      }
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="lado-esquerdo">
+
+      <div class="logo">
+        <a href="#inicio">
+          <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+        </a>
+      </div>
+      <button class="menu-toggle">
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+
+      <nav class="menu">
+        
+        <ul id="lista">
+
+          <li id="inicio-li">
+            <a href="#inicio" id="incio">Início</a>
+          </li>
+          <li id="cursos-li">
+            <a href="#cursos" id="cursos">Cursos</a>
+          </li>
+          <li id="sobre-li">
+            <a href="#sobre" id="sobre">Sobre</a>
+          </li>
+          <li id="contato-li">
+            <a href="#contato" id="contato">Contato</a>
+          </li>
+
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <div class="lado-direito">
+      <aside class="autenticacao">
+        <a href="#login">Login</a>
+        <a href="#registar" class="botao destaque">Registrar</a>
+      </aside>
+    </div>
+  </header>
+
+  <script>
+     window.onhashchange = function (e) { //Sempre que houver mudança no hash a função é acionada
+      const oldURL = e.oldURL.split('#')[1] //O split divide uma string a partir de uma URL, nesse caso queremos o segunda elemento logo indice 1
+      const newURL = e.newURL.split('#')[1]
+      console.log(oldURL,newURL)
+      const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+      const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+      oldLink && oldLink.classList.remove('selected')
+      newLink && newLink.classList.add('selected')
+     } 
+
+
+    // const url = window.location.href
+
+    // const ul = document.querySelector("#lista")
+    // const aInicio = document.querySelector("#inicio-li")
+    // const aCurso = document.querySelector("#curso-li")
+    // const aSobre = document.querySelector("#sobre-li")
+    // const acontato = document.querySelector("#contato-li")
+
+    // const incio = document.querySelector("#inicio")
+    // const curso = document.querySelector("#curso")
+    // const sobre = document.querySelector("#sobre")
+    // const contato = document.querySelector("#contato")
+
+    // console.log(url)
+    // console.log(url)
+    
+    // if (url == "http://127.0.0.1:5500/desafioMenu.html#inicio") {
+    //  aInicio.classList.add('selected')
+    // } else {
+    //   document.querySelector('.selected').classList.remove('selected');
+    // }
+    
+    
+
+  </script>
+</body>
+
+</html>

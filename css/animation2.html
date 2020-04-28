@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation 2</title>
+  <style>
+    body {
+    
+      font-size: 2em;
+    }
+
+    .container {
+      overflow: hidden;
+    }
+
+    .p1 {
+      opacity: 0;
+    }
+
+    .p1 {
+      animation-duration: 3s;
+      animation-name: aparecer;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 1;
+        color: blue;
+      }
+
+      to {}
+
+      60% {
+        font-size: 200%;
+        margin-left: 25%;
+        width: 150%;
+        color: red;
+      }
+
+      100% {
+        font-size: 500%;
+        margin-left: 25%;
+        width: 150%;
+        color:green;
+      }
+    }
+
+    .p2 {
+      color: red;
+      font-size: 2.5em;
+    }
+
+    .p2 {
+      animation-duration: 5s;
+      animation-name: slide;
+      animation-iteration-count: infinite;
+
+    }
+
+    @keyframes slide {
+      from {
+        margin-left: 0%;
+        width: 100%;
+      }
+
+      to {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod suscipit quibusdam maiores a
+      quidem accusamus. Sequi possimus, velit id accusantium odit, beatae, amet quisquam praesentium in quos illum
+      ducimus?</p>
+
+    <p class="p2">MJ 23</p>
+  </div>
+</body>
+
+</html>

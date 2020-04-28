@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #02</title>
+    <style>
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+            
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+
+        body {
+          display: grid;
+          grid-template-columns: [inicio]1fr [metade-1] 1fr [metade-2] 1fr [fim]; /*Dando nomes para as linhas*/
+          grid-template-rows: repeat(3, 1fr); /*1fr 1fr 1fr daria no mesmo*/
+          /*É possível colocar um gap/separaçao entre as linas e/ou colunas*/
+          grid-column-gap: 5%; /*Aceita valor em px*/
+          grid-row-gap: 15px;
+          /*Shorthand first row*/
+          grid-gap: 50px 30px;
+          /*Usando apenas um valor, vale pra row e column*/ 
+          grid-gap: 100px;
+        }
+
+        .d1 {
+          grid-column-start: metade-2;
+          grid-column-end: fim;
+          /*Shorthand para asduas propriedades, atençao ao barra*/
+          grid-column: metade-1 / fim;
+          grid-row: 1 / span 2;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+</body>
+
+</html>
