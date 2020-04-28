@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      @keyframes scaling {
+        0% {
+          transform: scale(0.5, 2.0);
+        }
+        50% {
+          transform: scale(1.5, 0.5);
+        }
+        100% {
+          transform: scale(1.0, 1.0);
+        }
+      }
+      .eternal-scaling {
+        background-color: #e0e0e0;
+        animation: scaling 2s linear infinite alternate;
+      }
+
+       @keyframes rotating {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .eternal-rotating {
+        margin: 100px;
+        width: fit-content;
+        animation: rotating 200ms linear infinite;
+      }
+         @keyframes square-rotating {
+        0% {
+          transform: rotate3d(1, 1, 1, 150deg);
+        }
+        100% {
+          transform: rotate3d(-1, -1, -1, 150deg);
+        }
+      }
+      .square-rotating {
+        margin:100px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: square-rotating 200ms linear infinite;
+      }
+
+        @keyframes skewing {
+        0% {
+          transform: skew(0deg);
+        }
+        100% {
+          transform: skew(180deg);
+        }
+      }
+      .eternal-skewing {
+        margin: 100px;
+        font-size: 100px;
+        width: fit-content;
+        animation: skewing 5s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eternal-scaling">Scale em ação!</div>
+
+    <div class="eternal-rotating">Hélice de avião!</div>
+
+    <div class="square-rotating"></div>
+
+    <div class="eternal-skewing">Entortanto a frase!</div>
+
+    
+  </body>
+</html>
