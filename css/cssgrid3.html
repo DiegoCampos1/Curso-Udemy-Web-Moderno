@@ -12,7 +12,8 @@
     }
 
     header {
-      grid-area: cabecalho; /*Definir um label pra cada elemento*/
+      grid-area: cabecalho;
+      /*Definir um label pra cada elemento*/
     }
 
     nav {
@@ -25,35 +26,38 @@
 
     footer {
       grid-area: rodape;
-      
     }
 
     body {
       display: grid;
       min-height: 100vh;
-      grid-template-columns: 300px 1fr; /*definido duas colunas*/
-      grid-template-rows: 100px 1fr 100px;  /*definindo três linhas*/
-      grid-template-areas: 
-      'cabecalho cabecalho' /*As duas colunas da primeira linha serao ocupados pelo cabecalho*/
-      'navegacao conteudo' /* a primeira coluna da segunda linha sera a navegacao e a segunda coluna da primeira linha sera o conteudo*/
-      'rodape rodape'; /*as duas colunas da terceira linha sera o rodape*/
+      grid-template-columns: 300px 1fr;
+      /*definido duas colunas*/
+      grid-template-rows: 100px 1fr 100px;
+      /*definindo três linhas*/
+      grid-template-areas:
+        'cabecalho cabecalho'
+        /*As duas colunas da primeira linha serao ocupados pelo cabecalho*/
+        'navegacao conteudo'
+        /* a primeira coluna da segunda linha sera a navegacao e a segunda coluna da primeira linha sera o conteudo*/
+        'rodape rodape';
+      /*as duas colunas da terceira linha sera o rodape*/
 
     }
 
-    @media screen and (max-width: 700px) {  
+    @media screen and (max-width: 700px) {
       body {
-     
+
         grid-template-columns: 1fr;
         grid-template-rows: 80px 80px 1fr 100px;
-        grid-template-areas: 
-        'cabecalho'
-        'navegacao'
-        'conteudo'
-        'rodape'
+        grid-template-areas:
+          'cabecalho'
+          'navegacao'
+          'conteudo'
+          'rodape'
         ;
+      }
     }
-    }
-
   </style>
 </head>
 
