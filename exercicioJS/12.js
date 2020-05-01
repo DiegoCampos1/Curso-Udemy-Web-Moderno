@@ -2,7 +2,7 @@
 function fatorial (num) {
   if (num < 0){
     return `O valor deve ser maior ou igual a zero`
-  } else if ( (num == 0) || (num == 1) ){
+  } else if ( (num === 0) || (num === 1) ){
     return 1
   } else {
     let acumula = 1
