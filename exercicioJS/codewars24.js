@@ -1,5 +1,5 @@
 function getSumOfDigits(integer) {
-let array = Array.from(String(integer), Number);
+let array = Array.from(String(Math.abs(integer)), Number);
 
 let resultado = 0
 for (let i = 0 ; i < array.length ; i += 1){
@@ -9,4 +9,4 @@ for (let i = 0 ; i < array.length ; i += 1){
 return resultado
 }
 
-console.log(getSumOfDigits(123))
+console.log(getSumOfDigits(-32))
