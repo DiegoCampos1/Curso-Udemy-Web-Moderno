@@ -1,0 +1,26 @@
+{
+  "name": "cursoudemy",
+  "version": "1.0.0",
+  "description": "treinamento",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoCampos1/Curso-Udemy-Web-Moderno.git"
+  },
+  "keywords": [
+    "treinamento"
+  ],
+  "author": "'Diego'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoCampos1/Curso-Udemy-Web-Moderno/issues"
+  },
+  "homepage": "https://github.com/DiegoCampos1/Curso-Udemy-Web-Moderno#readme"
+}
