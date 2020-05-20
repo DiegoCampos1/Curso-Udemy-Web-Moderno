@@ -1,6 +1,6 @@
 const url = "http://files.cod3r.com.br/curso-js/funcionarios.json";
 const axios = require("axios");
-
+console.log(url)
 const chineses = (f) => f.pais === "China";
 const mulheres = (f) => f.genero === "F";
 const menorSalario = (a, b) => {
