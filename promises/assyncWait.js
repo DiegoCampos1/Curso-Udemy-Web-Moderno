@@ -21,9 +21,13 @@ const getTurma = (letra) => {
   });
 };
 
-Promise.all([getTurma("A"), getTurma("B"), getTurma("C")])
-  .then((turmas) => [].concat(...turmas))
-  .then((alunos) => alunos.map((aluno) => aluno.nome))
-  .then((nomes) => console.log(nomes));
+let obterAlunos = async() => {
+  const ta = await getTurma('A')
+  const tb = await getTurma('B')
+  const tc = await getTurma('C')
+  return [...ta, ...tb, ...tc]
+}
 
-  getTurma('D').catch(e => console.log(e))
+obterAlunos()
+.then(alunos => alunos.map(a => a.nome))
+.then(nomes => console.log(nomes))
