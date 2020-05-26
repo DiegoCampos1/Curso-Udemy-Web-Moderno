@@ -1,14 +1,10 @@
-function findShort(s){
-  const array = s.split(" ")
-  let aux = array[0].length
-  for (let i = 1; i < array.length; i++) {
-    if (array[i].length < aux)
-    aux = array[i].length
-  } 
-  return aux
-}
+const fizzBuzzCustom = function(stringOne = "Fizz", stringTwo = "Buzz", numOne = 3, numTwo = 5) {
+  let arr =[]
+  for (let i = 1; i <= 100; i++) {
+    let f = i % numOne == 0, b = i % numTwo == 0;
+    arr.push(f ? b ? `${stringOne}${stringTwo}` : `${stringOne}` : b ? `${stringTwo}` : i);
+  }
+  return arr
+};
 
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
-console.log(findShort("turns out random test cases are easier than writing out basic ones"));
-
-
+console.log(fizzBuzzCustom())
